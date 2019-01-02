@@ -21,3 +21,7 @@ pip install -r requirements.txt
 
 # 运行
 gunicorn -w 50 -b 0.0.0.0:8080 main:app -t 500 -D --access-logfile /data/logs/gunicorn/WGYNOTICE.log
+
+# 关闭
+ps aux|grep gunicorn|grep -v grep|grep -v tail|awk '{print $2}'|xargs kill -s 9
+
