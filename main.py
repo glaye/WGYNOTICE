@@ -60,7 +60,6 @@ rc = Myrediscluster.Myrediscluster()
 # flask对象
 app = Flask(__name__)
 
-
 @app.route('/CTDNOTICE/ICCP', methods=['POST','GET'])
 def process():
     # 接收 mac 和 报文
